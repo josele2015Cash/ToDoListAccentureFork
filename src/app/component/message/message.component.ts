@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { Platform, IonItem, IonLabel, IonNote, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { chevronForward } from 'ionicons/icons';
-import { Message } from '../services/data.service';
+import { Message } from '../../services/data.service';
 
 @Component({
   selector: 'app-message',
@@ -18,6 +18,9 @@ export class MessageComponent {
   @Input() message?: Message;
   isIos() {
     return this.platform.is('ios')
+  }
+  isAndroid() {
+    return this.platform.is('android')
   }
   constructor() {
     addIcons({ chevronForward });

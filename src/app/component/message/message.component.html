@@ -3,7 +3,7 @@
     [routerLink]="'/message/' + message.id"
     [detail]="false"
     >
-    <div slot="start" [class]="!message.read ? 'dot dot-unread' : 'dot'"></div>
+    <div slot="start" [class]="!message.check ? 'dot dot-unread' : 'dot'"></div>
     <ion-label class="ion-text-wrap">
       <h2>
         {{ message.fromName }}
