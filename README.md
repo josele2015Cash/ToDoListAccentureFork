@@ -1,6 +1,6 @@
 <p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
 
-# PRUEBA FRONT ACCENTURE V 0.1.1
+# PRUEBA FRONT ACCENTURE V 0.2.1
 
 Version Fork inicial sin funcionalidad.
 
@@ -43,7 +43,25 @@ o Filtrar las tareas por categoría.
 
 El proyecto deberia funcionar simplemente dando npm install.
 
-pero se tuvo instalar npm install --save @capacitor-community/sqlite
-npm i @capacitor/splash-screen 
+pero se tuvo instalar npm install --save @capacitor-community/sqlite No arranca el proyecto pero es el comando recomendable por la comunidad
+
+npm i @capacitor/splash-screen
+npm install @ionic-native/core
+    
+El comando esta mas funcional para ionic v5 pero se forzo el node para que funcionara con cordova
+    npm install cordova-sqlite-storage --force comando legado
+    npm install @awesome-cordova-plugins/sqlite
+    npm install -g cordova-splash      
+    cordova plugin add cordova-sqlite-storage
+    cordova plugin add cordova-plugin-splashscreen      
+    ionic cap sync
+    npm i @capacitor/ios
+    npm i @capacitor/android
+    npx cap add android
+    ionic cordova platform add android 
+    ionic cordova platform add ios
+    npm i --legacy-peer-deeps
+    
+
 tutorial usado https://www.youtube.com/watch?v=BM70fDqUo3c
 revisar documentación oficial

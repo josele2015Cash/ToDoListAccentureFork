@@ -1,11 +1,12 @@
 
 <div class="ion-page" id="main-content">
   <ion-header>
+    
     <ion-toolbar>
+    <ion-searchbar placeholder="buscar tareas..."></ion-searchbar>
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Menu</ion-title>
+      </ion-buttons>    
     </ion-toolbar>
   </ion-header>
 
@@ -28,14 +29,24 @@
 
     <ion-list>
       @for (message of getMessages(); track message) {
-      <app-message [message]="message"></app-message>
+      <app-message-tarea (checkChange)="manejarAccion($event)" [message]="message"></app-message-tarea>
       }
     </ion-list>
 
-    <div class="button-container">
-      <ion-button>Crear Tarea</ion-button>
-      <ion-button color="medium">Modificar Tarea</ion-button>
-      <ion-button color="danger">Eliminar Tarea</ion-button>
+    <!-- Ejemplo 6: Grid responsivo personalizado -->
+    <div class="button-grid">
+      <div class="button-item">
+        <ion-button expand="block" (click)="clickCrearTarea()">
+          Crear Tarea</ion-button>
+      </div>
+      <div class="button-item">
+        <ion-button expand="block" color="medium" (click)="clickModificarTarea()">
+          Modificar Tarea</ion-button>
+      </div>
+      <div class="button-item">
+        <ion-button expand="block" color="danger" (click)="clickEliminarTarea()">
+          Eliminar Tarea</ion-button>
+      </div>
     </div>
   </ion-content>
 </div>

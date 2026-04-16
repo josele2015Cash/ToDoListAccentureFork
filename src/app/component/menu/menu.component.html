@@ -1,3 +1,4 @@
+
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -5,7 +6,11 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding"> 
-    <ion-button (click)="irTarea()">Tarea</ion-button>
-    <ion-button (click)="irCategoria()">Categoria</ion-button>
+      <ion-nav-link router-direction="forward" [component]="tareaPage">
+        <ion-button expand="block" (click)="irTarea()">Tarea</ion-button>
+      </ion-nav-link>
+      <ion-nav-link router-direction="forward" [component]="categoriaPage">
+        <ion-button expand="block" (click)="irCategoria()">Categoria</ion-button>
+      </ion-nav-link>
   </ion-content>
 </ion-menu>

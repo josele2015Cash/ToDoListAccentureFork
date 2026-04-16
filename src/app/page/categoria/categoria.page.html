@@ -2,10 +2,10 @@
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
+      <ion-searchbar placeholder="Buscar categorías..."></ion-searchbar>
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -28,14 +28,14 @@
 
     <ion-list>
       @for (message of getMessages(); track message) {
-      <app-message [message]="message"></app-message>
+      <app-message (checkChange)="manejarAccion($event)" [message]="message"></app-message>
       }
     </ion-list>
 
     <div class="button-container">
-      <ion-button>Crear Categoria</ion-button>
-      <ion-button color="medium">Modificar Categoria</ion-button>
-      <ion-button color="danger">Eliminar Categoria</ion-button>
+      <ion-button expand="block" (click)="clickCrearCategoria()">Crear Categoria</ion-button>
+      <ion-button expand="block" color="medium" (click)="clickModificarCategoria()">Modificar Categoria</ion-button>
+      <ion-button expand="block" color="danger" (click)="clickEliminarCategoria()">Eliminar Categoria</ion-button>
     </div>
   </ion-content>
 </div>

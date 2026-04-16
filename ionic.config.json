@@ -1,5 +1,8 @@
 {
   "name": "toDoListAccenture",
-  "integrations": {},
+  "integrations": {
+  
+    "capacitor": {}
+  },
   "type": "angular"
 }
